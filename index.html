@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tags Demo</title>
+  <style>
+    .food-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    .food-section h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: #222;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .food-section > p {
+      text-align: center;
+      color: #888;
+      font-size: 0.95rem;
+      margin-bottom: 40px;
+    }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .food-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .food-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    .food-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #eee;
+    }
+
+    .food-card .body {
+      padding: 22px 20px 24px;
+    }
+
+    .food-card .body h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 6px;
+    }
+
+    .food-card .meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    .food-card .meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .food-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: #f0f0f0;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .food-tag.green { background: #e8f5e9; color: #388e3c; }
+    .food-tag.red   { background: #fce4ec; color: #c62828; }
+
+    .source-badge {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+
+    .source-badge span {
+      background: #eee;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HTML Tags Demo Page</h1>
+    <p>A beginner-friendly demonstration of common HTML elements.</p>
+    <nav>
+      <ul>
+        <li><a href="#text">Text Elements</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#media-section">Links &amp; Images</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#audio-video">Media</a></li>
+        <li><a href="#food">Food</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="text">
+      <h2>Text Elements</h2>
+
+      <h3>Headings</h3>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+
+      <h3>Paragraphs and Formatting</h3>
+      <p>This is a standard paragraph. It contains a sentence that demonstrates how <strong>strong importance</strong> and <em>emphasis</em> look. You can also use <small>small text</small> and inline <code>code</code> snippets.</p>
+      <p>This is another paragraph.<br>A line break appears above this line.</p>
+      <hr>
+
+      <h3>Blockquote</h3>
+      <blockquote>
+        <p>This is a blockquote. It is used to represent quoted content from another source.</p>
+      </blockquote>
+
+      <h3>Preformatted Text</h3>
+      <pre>
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+      </pre>
+    </section>
+
+    <section id="lists">
+      <h2>Lists</h2>
+
+      <h3>Ordered List</h3>
+      <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </ol>
+
+      <h3>Unordered List</h3>
+      <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+      </ul>
+
+      <h3>Description List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+      </dl>
+    </section>
+
+    <section id="media-section">
+      <h2>Links and Images</h2>
+
+      <h3>Links</h3>
+      <p>Visit <a href="https://developer.mozilla.org">MDN Web Docs</a> to learn more about HTML.</p>
+
+      <h3>Images</h3>
+      <figure>
+        <img src="https://placehold.co/400x200" alt="A sample placeholder image showing a 400 by 200 rectangle">
+        <figcaption>A placeholder image with caption.</figcaption>
+      </figure>
+    </section>
+
+    <section id="table">
+      <h2>Table</h2>
+      <table>
+        <caption>Course Schedule</caption>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML Basics</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>CSS Fundamentals</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>JavaScript Intro</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="form">
+      <h2>Form</h2>
+      <form>
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <label for="country">Country:</label>
+          <select id="country" name="country">
+            <option value="">-- Select --</option>
+            <option value="th">Thailand</option>
+            <option value="jp">Japan</option>
+            <option value="us">United States</option>
+          </select>
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="audio-video">
+      <h2>Media</h2>
+
+      <h3>Audio</h3>
+      <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Video</h3>
+      <video controls width="400" src="https://www.w3schools.com/html/mov_bbb.mp4">
+        Your browser does not support the video element.
+      </video>
+    </section>
+
+    <section id="food" class="food-section">
+      <h2>Food Menu</h2>
+      <p>A minimalist collection of dishes from around the world</p>
+      <div class="source-badge">
+        <span>my-object.js</span>
+        <span>my-array.js</span>
+      </div>
+      <div class="food-grid" id="foodGrid"></div>
+    </section>
+
+    <article>
+      <h2>Article</h2>
+      <p>This is a semantic <code>&lt;article&gt;</code> element. It represents a self-contained piece of content that could be distributed independently.</p>
+    </article>
+
+    <aside>
+      <h3>Aside</h3>
+      <p>This is an <code>&lt;aside&gt;</code> element. It contains content related to the main content, like a sidebar or note.</p>
+    </aside>
+
+  </main>
+
+  <footer>
+    <p><small>&copy; 2026 HTML Tags Demo. Built with HTML only.</small></p>
+  </footer>
+
+  <script>
+    const foodArray = ["Pizza", "Malatang", "Pad Thai", "Burger", "Sushi", "Medovik"];
+
+    const foodDatabase = [
+      { id:1, name:"Pizza",      cuisine:"Italian",    origin:"Italy",         vegetarian:false },
+      { id:2, name:"Malatang",   cuisine:"Chinese",    origin:"China",         vegetarian:false },
+      { id:3, name:"Pad Thai",   cuisine:"Thai",       origin:"Thailand",      vegetarian:false },
+      { id:4, name:"Burger",     cuisine:"American",   origin:"United States", vegetarian:false },
+      { id:5, name:"Sushi",      cuisine:"Japanese",   origin:"Japan",         vegetarian:false },
+      { id:6, name:"Medovik",    cuisine:"Russian",    origin:"Russia",        vegetarian:false }
+    ];
+
+    const images = {
+      "Pizza":    "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop",
+      "Malatang": "https://images.pexels.com/photos/36120991/pexels-photo-36120991.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      "Pad Thai": "https://images.unsplash.com/photo-1559314809-0d155014e29e?w=600&h=400&fit=crop",
+      "Burger":   "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop",
+      "Sushi":    "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&h=400&fit=crop",
+      "Medovik":  "https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=600&h=400&fit=crop"
+    };
+
+    const grid = document.getElementById('foodGrid');
+
+    foodDatabase.forEach(item => {
+      const vegLabel = item.vegetarian ? 'Vegetarian' : 'Non-Vegetarian';
+      const vegClass = item.vegetarian ? 'green' : 'red';
+
+      const card = document.createElement('div');
+      card.className = 'food-card';
+
+      card.innerHTML = `
+        <img src="${images[item.name]}" alt="${item.name}" loading="lazy" />
+        <div class="body">
+          <h3>${item.name}</h3>
+          <div class="meta">
+            <span>&#127860; ${item.cuisine}</span>
+            <span>&#127758; ${item.origin}</span>
+          </div>
+          <span class="food-tag ${vegClass}">${vegLabel}</span>
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+
+    console.log('Data from my-array.js:', foodArray);
+    console.log('Data from my-object.js:', foodDatabase);
+  </script>
+
+</body>
+</html>
