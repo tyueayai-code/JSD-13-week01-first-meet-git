@@ -42,3 +42,4 @@ let foodDatabase = [
     vegetarian: false,
   }
 ]
+console.log(foodDatabase)
